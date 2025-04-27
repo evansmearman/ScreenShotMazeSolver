@@ -12,7 +12,7 @@ def process_maze(img_path) -> np.ndarray:
     grey_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Convert to black and white
-    _, black_white_img = cv2.threshold(grey_img, 127, 255, cv2.THRESH_BINARY)
+    _, black_white_img = cv2.threshold(grey_img, 128, 255, cv2.THRESH_BINARY)
 
     # Find rows with black pixels (value 0)
     zero_rows = np.where(black_white_img == 0)[0]
